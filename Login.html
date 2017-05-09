@@ -14,9 +14,18 @@
       </div>
       <div class="row">
         <div class="col-md-3">
-          <form class="m-3">
-            <div class="form-group"> <label class="text-white">Email address</label> <input type="email" class="form-control" placeholder="Enter email"> </div>
-            <div class="form-group"> <label>Password</label> <input type="password" class="form-control" placeholder="Password"> </div> <button type="submit" class="btn btn-primary w-50" data-toggle="">Login</button> </form>
+          <div id="login-wraper">
+            <form method="post" action="/cxoptimise/login">
+              <legend><span class="blue">Enter Details</span></legend>
+              <div class="body">
+                <div align="left"> <label><b>Username</b></label> </div>
+                <div align="left"> <input type="text" name="username" id="username"><span id="usernameError"></span></div>
+                <div style="margin-top:10px"></div>
+                <div align="left"> <label><b>Password</b></label> </div>
+                <div align="left"> <input type="password" name="password" id="password"><span id="passwordError"></span></div>
+              </div>
+              <div class="footer" style="margin-top:20px"> <button type="submit" onclick="javascript:handleinput();">Sign In</button> </div> <input type="hidden" name="_csrf" value="dd0b9373-7730-4892-995d-9d601bf891a8"></form>
+          </div>
         </div>
         <div class="col-md-9"><img class="center-block img-fluid d-block" src="integration.png"></div>
       </div>
